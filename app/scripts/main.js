@@ -1,9 +1,14 @@
-// google api key AIzaSyC9sCcEL-7LIq3oTpPnfg-RtvqHBtAYSC0
+(function () {
+  // google api key AIzaSyC9sCcEL-7LIq3oTpPnfg-RtvqHBtAYSC0
 
-var angular = require('angular');
+  'use strict';
 
-var FavoritesCtrl = require('./controllers/FavoritesCtrl');
+  var angular = require('angular');
 
-var app = angular.module('bestest', []);
+  var FavoritesCtrl = require('./controllers/FavoritesCtrl');
 
-app.controller('FavoritesCtrl', ['$scope', FavoritesCtrl]);
+
+  var app = angular.module('bestest', []);
+  app.controller('FavoritesCtrl', ['$scope', FavoritesCtrl]);
+
+})();

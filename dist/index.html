@@ -6,7 +6,7 @@
   <body ng-controller="FavoritesCtrl">
     <header>
       <h1>bestest</h1>
-      <p>{{test}}</p>
+      <p>{{test}} {{400 + 20}}</p>
     </header>
 
     <main>
@@ -17,6 +17,15 @@
         <input type="text" name="place" id="place" placeholder="BevMo" />
         <input type="submit" />
       </form>
+
+      <div ng-controller="FavoritesCtrl as favs">
+        <h1>One nearby favorite</h1>
+        <article ng-repeat="place in favs.places">
+          <img ng-src="{{place.image.thumb}}" />
+          <h1>{{place.name}}</h1>
+          <p>{{place.description}}</p>
+        </article>
+      </div>
     </main>
 
     <script src="js/bundle.js"></script>

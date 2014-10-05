@@ -41,6 +41,12 @@ gulp.task('views', function () {
     .pipe(refresh(lrserver));
 });
 
+gulp.task('images', function () {
+  gulp.src('app/images/**/*')
+    .pipe(gulp.dest('dist/images/'))
+    .pipe(refresh(lrserver));
+});
+
 // setup server
 var server = express();
 server.use(livereload({port: livereloadport}));
@@ -57,7 +63,8 @@ gulp.task('watch', ['lint'], function () {
     'browserify'
   ]);
   gulp.watch(['app/index.html', 'app/views/**/*.html'], [
-    'views'
+    'views',
+    'images'
   ]);
 });
 
