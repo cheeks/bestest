@@ -70,3 +70,6 @@ gulp.task('dev', ['watch'], function () {
   // start livereload server
   lrserver.listen(livereloadport);
 });
+
+
+// thanks to http://mindthecode.com/lets-build-an-angularjs-app-with-browserify-and-gulp/
