@@ -71,7 +71,7 @@ gulp.task('watch', ['lint'], function () {
 
 
 // dev server / watch task
-gulp.task('dev', ['watch'], function () {
+gulp.task('dev', ['watch', 'images', 'views', 'lint', 'browserify'], function () {
   // start webserver
   server.listen(serverport);
   // start livereload server
