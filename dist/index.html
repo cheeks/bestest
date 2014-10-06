@@ -3,12 +3,16 @@
   <head>
     <title>bestest</title>
   </head>
-  <body ng-controller="FavoritesCtrl">
+  <body ng-controller="FavoritesController">
     <header>
       <h1>What's the best place near you right now?</h1>
+      <nav ng-controller="">
+        <button>post</button>
+        <button>view</button>
+      </nav>
     </header>
 
-    <main>
+    <section class="post-favorites">
       <p>Somewhere within walking distance, please</p>
 
       <form name="voteForm" action="" method="post">
@@ -16,7 +20,10 @@
         <input type="submit" />
       </form>
 
-      <div ng-controller="FavoritesCtrl as favs">
+    </section>
+
+    <section class="view-favorites">
+      <div ng-controller="FavoritesController as favs">
         <h1>One nearby favorite</h1>
         <article ng-repeat="place in favs.places">
           <img ng-src="{{place.image.thumb}}" />
@@ -24,7 +31,7 @@
           <p>{{place.description}}</p>
         </article>
       </div>
-    </main>
+    </section>
 
     <script src="js/bundle.js"></script>
   </body>

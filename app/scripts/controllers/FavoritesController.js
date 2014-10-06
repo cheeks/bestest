@@ -1,6 +1,6 @@
 // 'use strict';
 //
-var FavoritesCtrl = function ($scope) {
+var FavoritesController = function ($scope) {
   this.places = myFavs;
   $scope.test = 'fart?';
 };
@@ -34,4 +34,4 @@ var myFavs = [
   }
 ];
 
-module.exports = FavoritesCtrl;
+module.exports = FavoritesController;

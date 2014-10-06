@@ -5,10 +5,10 @@
 
   var angular = require('angular');
 
-  var FavoritesCtrl = require('./controllers/FavoritesCtrl');
+  var FavoritesController = require('./controllers/FavoritesController');
 
 
   var app = angular.module('bestest', []);
-  app.controller('FavoritesCtrl', ['$scope', FavoritesCtrl]);
+  app.controller('FavoritesController', ['$scope', FavoritesController]);
 
 })();
